@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style1.css">
+  <style>
+    .error-message {
+      color: red;
+    }
+  </style>
+  <title>Signup</title>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+  <div class="signup-form">
+    <h2>Signup Form</h2>
+    <form id="signupForm" onsubmit="validateForm(event)">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+      </div>
+
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <div id="errorMessages" class="error-message"></div>
+  </div>
+  </div>
+</div>
+  <script>
+    function validateForm(event) {
+      event.preventDefault();
+
+      var username = document.getElementById('username').value;
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+      var confirmPassword = document.getElementById('confirmPassword').value;
+      var errorMessages = document.getElementById('errorMessages');
+      errorMessages.innerHTML = '';
+
+      if (!username || !email || !password || !confirmPassword) {
+        errorMessages.innerHTML = 'All fields are required.';
+        return;
+      }
+
+      if (password !== confirmPassword) {
+        errorMessages.innerHTML = 'Password and Confirm Password must match.';
+        return;
+      }
+      alert('Form submitted successfully!');
+      document.getElementById('signupForm').reset();
+    }
+  </script>
+</body>
+</html>

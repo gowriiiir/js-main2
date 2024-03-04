@@ -1,0 +1,39 @@
+
+*
+body{
+    background-color: lightgreen !important;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#loginBtn{
+    margin-inline: 10px;
+}
+#regBtn{
+    margin-inline: 10px;
+}
+
+.navbar-dark .navbar-brand{
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#cards{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    cursor: pointer;
+    margin-bottom: 2em;
+    ;
+
+}
+.card{
+    box-shadow: 0 0 4px 3px orangered;
+}
+.card:hover{
+    background-color: gray;
+    color: #fff;
+}
+h1,h3{
+  color: orangered;
+}

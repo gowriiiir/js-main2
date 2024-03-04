@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    
+    
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        .error-message {
+          color: red;
+        }
+      </style>
+</head>
+<body>
+    <div class="container">
+     <div class="header">
+        <h2>Login Form</h2>
+        <form class="form" id="form" onsubmit="validateForm(event)">
+           <div class="form-control">
+            <label>Username</label>
+            <input type="text" placeholder="Enter your Username" id="username">
+         
+           </div>
+           <div class="form-control">
+            <label>Email</label>
+            <input type="email" placeholder="Enter your Email" id="email">
+         
+           </div>
+         
+           <button >Login</button>
+           <h5>Creat Account!If you does have an Account! </h5>
+           <button  type="button" onclick="location.href='signin.html'">SIGN UP</button>
+
+        </form>
+        <div id="errorMessages" class="error-message"></div>
+    </div>
+</div>
+
+<script src="js2.js"></script>    
+</body>
+</html>
